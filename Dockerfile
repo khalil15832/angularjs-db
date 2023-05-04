@@ -1,4 +1,4 @@
-FROM node:18.12.1
+FROM node:latest
 
 # Create app directory
 WORKDIR /working
@@ -12,7 +12,7 @@ RUN npm install --quiet
 COPY . .
 
 # Generate build
-RUN npm run build --prod
+RUN npm run build
 
 # Move into the directory containing the build artifacts
 WORKDIR /working/dist/angularjs-db
