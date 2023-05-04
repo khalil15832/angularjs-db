@@ -12,7 +12,7 @@ RUN npm install --quiet
 COPY . .
 
 # Generate build
-RUN npm run build
+RUN npm run build --prod
 
 # Move into the directory containing the build artifacts
 WORKDIR /working/dist/angularjs-db
